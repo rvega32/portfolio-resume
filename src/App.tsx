@@ -70,7 +70,7 @@ const navItems = [
   { id: 'contact', label: 'Contact', Icon: Contact },
 ] as const
 
-/** Update these with your real details. Add `public/resume.pdf` for the download link. */
+/** Update these with your real details. Replace `public/RicardoResume.pdf` with your real resume. */
 const CONTACT = {
   phoneDisplay: '(323) 977-0604',
   phoneTel: '+13239770604',
@@ -601,7 +601,7 @@ navigation flows. This application is under work and not yet finished.
             <a
               className="contact-social contact-social--resume"
               href={CONTACT.resumePath}
-              download="Ricardo-Resume.pdf"
+              download="RicardoResume.pdf"
             >
               <FileDown className="contact-social__icon" aria-hidden="true" />
               <span>Resume (PDF)</span>
