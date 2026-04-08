@@ -3,7 +3,9 @@
   flex: 1;
   flex-direction: row;
   align-items: stretch;
-  min-height: 100svh;
+  /* vh fallback → dvh fixes iOS Safari toolbar; avoid locking sidebar to svh vs tall main column */
+  min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
 }
 
@@ -14,8 +16,7 @@
   padding: 32px 16px;
   position: sticky;
   top: 0;
-  align-self: flex-start;
-  height: 100svh;
+  align-self: stretch;
   box-sizing: border-box;
   background: var(--bg-sidebar);
 }
@@ -130,19 +131,25 @@
   @media (max-width: 1024px) {
     padding: 32px 20px;
   }
+
+  @media (max-width: 480px) {
+    padding: 24px 16px;
+    scroll-margin-top: max(1rem, env(safe-area-inset-top, 0px));
+  }
 }
 
 .skills-grid {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: clamp(10px, 2vw, 14px);
 
-  @media (max-width: 1024px) {
+  /* Tablet / small laptop */
+  @media (max-width: 1100px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 560px) {
     grid-template-columns: 1fr;
   }
 }
@@ -367,10 +374,14 @@
   margin-top: 24px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  gap: clamp(12px, 2vw, 18px);
   align-items: stretch;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 640px) {
     grid-template-columns: 1fr;
   }
 }
@@ -569,7 +580,8 @@
   place-items: center;
   text-align: center;
   flex-grow: 1;
-  min-height: min(70svh, 720px);
+  min-height: min(70vh, 720px);
+  min-height: min(70dvh, 720px);
 
   .home-intro {
     display: flex;
@@ -653,7 +665,10 @@
     z-index: 20;
     border-right: none;
     border-bottom: 1px solid var(--accent);
-    padding: 12px 16px;
+    padding-top: max(12px, env(safe-area-inset-top, 0px));
+    padding-bottom: 12px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
   }
 
   .sidebar-nav ul {
@@ -664,9 +679,29 @@
   }
 
   .sidebar-nav a {
-    padding: 8px 12px;
+    padding: 10px 14px;
     font-size: 14px;
     border-radius: 999px;
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+}
+
+/* Touch-first devices: slightly larger tap targets (any browser) */
+@media (hover: none) and (pointer: coarse) {
+  .sidebar-nav a {
+    min-height: 44px;
+    padding: 12px 16px;
+  }
+
+  .contact-method {
+    padding: 20px 18px;
+  }
+
+  .contact-social {
+    padding: 12px 18px;
+    min-height: 44px;
+    box-sizing: border-box;
   }
 }
 
@@ -701,7 +736,11 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 560px) {
     grid-template-columns: 1fr;
   }
 }
@@ -818,4 +857,33 @@
 .main-content .contact-method:hover,
 .main-content .contact-social:hover {
   text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .skill-card,
+  .experience-card,
+  .project-card,
+  .contact-method,
+  .contact-social,
+  .sidebar-nav a,
+  .project-card__link {
+    transition-duration: 0.01ms;
+  }
+
+  .skill-card:hover,
+  .experience-card:hover,
+  .project-card:hover,
+  .contact-method:hover,
+  .contact-social:hover,
+  .project-card__link:hover {
+    transform: none;
+  }
+
+  .home-role__text {
+    animation: none;
+  }
 }
