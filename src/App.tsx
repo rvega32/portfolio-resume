@@ -213,7 +213,7 @@ function App() {
               </span>
             </h2>
             <p>
-              Hello, my name is Ricardo — you can call me Ricky. I&apos;m
+              Hello, my name is Ricardo, you can call me Ricky. I&apos;m
               pursuing a Bachelor&apos;s in Computer Science and building toward
               a career in software development.
             </p>
@@ -230,7 +230,7 @@ function App() {
             <p>
               Outside of software development, I enjoy sports including MMA,
               boxing, basketball, baseball, football, and soccer. The competitive
-              mindset from sports influences how I approach challenges—staying
+              mindset from sports influences how I approach challenges: staying
               curious, disciplined, and continuously focused on improvement.
             </p>
             <p>
@@ -344,7 +344,10 @@ function App() {
             <article className="experience-card">
               <header className="experience-card__header">
                 <div className="experience-card__title-row">
-                  <h3>Los Angeles County Internal Services Department — Delete the Divide</h3>
+                  <h3>
+                    Los Angeles County Internal Services Department: Delete the
+                    Divide
+                  </h3>
                   <span className="experience-card__location">
                     <MapPin
                       className="experience-card__location-icon"
@@ -361,7 +364,7 @@ function App() {
                     className="experience-card__timeline"
                     dateTime="2024-06"
                   >
-                    February 2026 – Current
+                    February 2026 to Current
                   </time>
                 </div>
               </header>
@@ -432,7 +435,7 @@ function App() {
                     className="experience-card__timeline"
                     dateTime="2025-08/2026-02"
                   >
-                    August 2025 – February 2026
+                    August 2025 to February 2026
                   </time>
                 </div>
               </header>
@@ -482,7 +485,7 @@ function App() {
                     className="experience-card__timeline"
                     dateTime="2022"
                   >
-                    March 2021 – May 2021
+                    March 2021 to May 2021
                   </time>
                 </div>
               </header>
@@ -509,14 +512,14 @@ function App() {
           <div className="projects-grid">
             <article className="project-card">
               <header className="project-card__header">
-                <h3>FlyAeroView – Live Footage</h3>
+                <h3>FlyAeroView: Live Footage</h3>
                 <p className="project-card__status">
                   In production · Demo available on request
                 </p>
               </header>
               <ul className="project-card__body">
                 <li>
-                  Founder &amp; Full-Stack Developer (2025 – Present) · Personal
+                  Founder &amp; Full-Stack Developer (2025 to Present) · Personal
                   startup
                 </li>
                 <li>
@@ -700,7 +703,7 @@ function App() {
 
             <article className="project-card">
               <header className="project-card__header">
-                <h3>Readr - Mobile Book Recommendation App</h3>
+                <h3>Readr: Mobile Book Recommendation App</h3>
               </header>
               <ul className="project-card__body">
                 <li>
