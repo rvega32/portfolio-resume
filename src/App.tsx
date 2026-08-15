@@ -62,11 +62,10 @@ import csharpLogo from './assets/csharp.svg'
 import './App.css'
 
 const ROLE_TITLES = [
-  'Full-Stack Developer',
-  'Backend Developer',
-  'Frontend Developer',
   'Software Engineer',
-  'Software Developer',
+  'Full-Stack Developer',
+  'Game Developer',
+  'ML Engineer',
 ] as const
 
 const navItems = [
