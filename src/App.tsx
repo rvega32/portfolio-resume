@@ -756,7 +756,7 @@ function App() {
                 <h3>United Peace Officers Against Crime</h3>
                 <a
                   className="project-card__link"
-                  href="https://upacprogram.com"
+                  href="https://upacprogram.org"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
