@@ -789,7 +789,7 @@ ul.project-card__body li {
   line-height: 1.7;
   letter-spacing: 0.015em;
   color: rgba(255, 255, 255, 0.88);
-  text-align: left;
+  text-align: center;
 }
 
 /* Contact */

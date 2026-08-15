@@ -228,23 +228,24 @@ function App() {
 
           <div className="about-content">
             <p>
-              Outside of coding, I&apos;m into sports — MMA, boxing, basketball,
-              baseball, football, and soccer. That competitive energy shows up
-              in how I approach problems: stay curious, stay hungry, and keep
-              improving.
+              Outside of software development, I enjoy sports including MMA,
+              boxing, basketball, baseball, football, and soccer. The competitive
+              mindset from sports influences how I approach challenges—staying
+              curious, disciplined, and continuously focused on improvement.
             </p>
             <p>
-              I like learning across different worlds — construction, how cars
-              work, the stock market, software development, and broader
-              economics. I&apos;m drawn to understanding systems, whether
-              they&apos;re mechanical, financial, or digital.
+              I also enjoy learning about a wide range of subjects, including
+              construction, automotive systems, financial markets, economics, and
+              technology. I&apos;m naturally drawn to understanding how complex
+              systems work, whether they&apos;re mechanical, financial, or
+              digital.
             </p>
             <p>
-              My greatest strengths are passion and curiosity — and I treat them
-              carefully, because the same drive that helps me grow can pull me
-              in too many directions. I&apos;m intentional about channeling that
-              energy into finishing what I start and going deep when it matters,
-              especially in software.
+              My greatest strengths are curiosity and passion for learning. I
+              enjoy exploring new ideas and technologies, while remaining
+              intentional about focusing my energy on meaningful goals and seeing
+              projects through to completion. This mindset has helped me
+              continually grow as a software developer and problem solver.
             </p>
           </div>
         </section>
