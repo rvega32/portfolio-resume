@@ -141,10 +141,9 @@
 .skills-grid {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(10px, 2vw, 14px);
 
-  /* Tablet / small laptop */
   @media (max-width: 1100px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -342,6 +341,29 @@
   color: rgba(255, 255, 255, 0.88);
 }
 
+ul.experience-card__body,
+.experience-card__bullets {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 8px;
+}
+
+ul.experience-card__body {
+  margin-top: 12px;
+}
+
+.experience-card__bullets {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.experience-card__body li,
+.experience-card__bullets li {
+  margin: 0;
+  padding-left: 2px;
+}
+
 .project-card__body {
   margin: 14px 0 0;
   padding: 0 18px;
@@ -354,6 +376,18 @@
   line-height: 1.7;
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.82);
+}
+
+ul.project-card__body {
+  list-style: disc;
+  padding-left: calc(18px + 1.1rem);
+  display: grid;
+  gap: 8px;
+}
+
+ul.project-card__body li {
+  margin: 0;
+  padding-left: 2px;
 }
 
 .experience-card__body + .experience-card__body {

@@ -18,8 +18,10 @@ import {
   Cloud,
   MonitorCog,
   Puzzle,
+  Palette,
+  Shield,
 } from 'lucide-react'
-import { DiJava } from 'react-icons/di'
+import { DiEclipse } from 'react-icons/di'
 import { FaAws, FaLinkedin } from 'react-icons/fa'
 import {
   SiGithub,
@@ -47,7 +49,12 @@ import {
   SiXcode,
   SiDocker,
   SiExpress,
-  SiFlask,
+  SiPhp,
+  SiTailwindcss,
+  SiNumpy,
+  SiDotnet,
+  SiFigma,
+  SiSupabase,
 } from 'react-icons/si'
 import azureLogo from './assets/azure.svg'
 import csharpLogo from './assets/csharp.svg'
@@ -90,52 +97,61 @@ type SkillItem = {
 }
 
 const SKILLS = {
-  languages: [
-    { name: 'JavaScript', Icon: SiJavascript },
+  programmingLanguages: [
     { name: 'TypeScript', Icon: SiTypescript },
+    { name: 'JavaScript', Icon: SiJavascript },
+    { name: 'Python', Icon: SiPython },
+    { name: 'C#', imgSrc: csharpLogo },
+    { name: 'PHP', Icon: SiPhp },
+  ],
+  markupAndStyling: [
     { name: 'HTML', Icon: SiHtml5 },
     { name: 'CSS', Icon: SiCss },
-    { name: 'SQL', Icon: Database },
     { name: 'XML', Icon: SiXml },
-    { name: 'Python', Icon: SiPython },
-    { name: 'Java', Icon: DiJava },
-    { name: 'C#', imgSrc: csharpLogo },
+  ],
+  databases: [
+    { name: 'MySQL', Icon: SiMysql },
+    { name: 'PostgreSQL', Icon: SiPostgresql },
+    { name: 'MongoDB', Icon: SiMongodb },
+    { name: 'Supabase', Icon: SiSupabase },
   ],
   frameworksAndLibraries: [
     { name: 'React', Icon: SiReact },
-    { name: 'React Native', Icon: SiReact },
     { name: 'Next.js', Icon: SiNextdotjs },
-    { name: 'Express.js', Icon: SiExpress },
-    { name: 'Flask', Icon: SiFlask },
-    { name: 'PyTorch', Icon: SiPytorch },
     { name: 'Three.js', Icon: SiThreedotjs },
-  ],
-  cloud: [
-    { name: 'AWS', Icon: FaAws },
-    { name: 'Azure', imgSrc: azureLogo },
-    { name: 'GCP', Icon: SiGooglecloud },
-    { name: 'Vercel', Icon: SiVercel },
+    { name: 'React Native', Icon: SiReact },
+    { name: 'Tailwind CSS', Icon: SiTailwindcss },
+    { name: 'Express.js', Icon: SiExpress },
+    { name: 'PyTorch', Icon: SiPytorch },
+    { name: 'NumPy', Icon: SiNumpy },
+    { name: 'ASP.NET', Icon: SiDotnet },
   ],
   runtimeAndOs: [
     { name: 'Node.js', Icon: SiNodedotjs },
     { name: 'Linux', Icon: SiLinux },
     { name: 'macOS', Icon: SiMacos },
   ],
+  cloudAndDeployment: [
+    { name: 'AWS', Icon: FaAws },
+    { name: 'Google Cloud Platform', Icon: SiGooglecloud },
+    { name: 'Microsoft Azure', imgSrc: azureLogo },
+    { name: 'Vercel', Icon: SiVercel },
+  ],
   tools: [
     { name: 'Git', Icon: SiGit },
     { name: 'GitHub', Icon: SiGithub },
-    { name: 'Jira', Icon: SiJira },
-    { name: 'Docker', Icon: SiDocker },
-    { name: 'VS Code', Icon: Code2 },
-    { name: 'Xcode', Icon: SiXcode },
     { name: 'Cursor', Icon: MousePointer2 },
+    { name: 'Visual Studio Code', Icon: Code2 },
+    { name: 'Eclipse', Icon: DiEclipse },
+    { name: 'Xcode', Icon: SiXcode },
+    { name: 'Jira', Icon: SiJira },
+    { name: 'Figma', Icon: SiFigma },
+    { name: 'Docker', Icon: SiDocker },
+  ],
+  otherTechnologies: [
     { name: 'REST APIs', Icon: Puzzle },
     { name: "CMS's", Icon: SiWordpress },
-  ],
-  databases: [
-    { name: 'MongoDB', Icon: SiMongodb },
-    { name: 'PostgreSQL', Icon: SiPostgresql },
-    { name: 'MySQL', Icon: SiMysql },
+    { name: 'reCAPTCHA', Icon: Shield },
   ],
 } as const
 
@@ -214,10 +230,30 @@ function App() {
           <div className="skills-grid" role="list">
             <article className="skill-card" role="listitem">
               <h3>
-                <Layers3 className="skill-icon" aria-hidden="true" />
-                <span>Languages</span>
+                <Code2 className="skill-icon" aria-hidden="true" />
+                <span>Programming Languages</span>
               </h3>
-              <ul className="skill-list">{renderSkillItems(SKILLS.languages)}</ul>
+              <ul className="skill-list">
+                {renderSkillItems(SKILLS.programmingLanguages)}
+              </ul>
+            </article>
+
+            <article className="skill-card" role="listitem">
+              <h3>
+                <Palette className="skill-icon" aria-hidden="true" />
+                <span>Markup &amp; Styling</span>
+              </h3>
+              <ul className="skill-list">
+                {renderSkillItems(SKILLS.markupAndStyling)}
+              </ul>
+            </article>
+
+            <article className="skill-card" role="listitem">
+              <h3>
+                <Database className="skill-icon" aria-hidden="true" />
+                <span>Databases</span>
+              </h3>
+              <ul className="skill-list">{renderSkillItems(SKILLS.databases)}</ul>
             </article>
 
             <article className="skill-card" role="listitem">
@@ -232,18 +268,20 @@ function App() {
 
             <article className="skill-card" role="listitem">
               <h3>
-                <Cloud className="skill-icon" aria-hidden="true" />
-                <span>Cloud</span>
-              </h3>
-              <ul className="skill-list">{renderSkillItems(SKILLS.cloud)}</ul>
-            </article>
-
-            <article className="skill-card" role="listitem">
-              <h3>
                 <MonitorCog className="skill-icon" aria-hidden="true" />
                 <span>Runtime &amp; OS</span>
               </h3>
               <ul className="skill-list">{renderSkillItems(SKILLS.runtimeAndOs)}</ul>
+            </article>
+
+            <article className="skill-card" role="listitem">
+              <h3>
+                <Cloud className="skill-icon" aria-hidden="true" />
+                <span>Cloud &amp; Deployment</span>
+              </h3>
+              <ul className="skill-list">
+                {renderSkillItems(SKILLS.cloudAndDeployment)}
+              </ul>
             </article>
 
             <article className="skill-card" role="listitem">
@@ -256,10 +294,12 @@ function App() {
 
             <article className="skill-card" role="listitem">
               <h3>
-                <Database className="skill-icon" aria-hidden="true" />
-                <span>Databases</span>
+                <Layers3 className="skill-icon" aria-hidden="true" />
+                <span>Other Technologies</span>
               </h3>
-              <ul className="skill-list">{renderSkillItems(SKILLS.databases)}</ul>
+              <ul className="skill-list">
+                {renderSkillItems(SKILLS.otherTechnologies)}
+              </ul>
             </article>
           </div>
         </section>
@@ -296,29 +336,51 @@ function App() {
                   </time>
                 </div>
               </header>
-              <p className="experience-card__body">
-                Trained residents with limited technical experience on computers,
-                smartphones, and essential software applications. Educated users on
-                cybersecurity fundamentals, including password security, phishing
-                awareness, and safe internet practices. Provided hands-on guidance
-                to help users confidently navigate digital tools, applications,
-                and online services. Translated technical concepts into clear,
-                user-friendly instruction for non-technical audiences.
-              </p>
-              <p className="experience-card__body">
+              <ul className="experience-card__body">
+                <li>
+                  Trained residents with limited technical experience on
+                  computers, smartphones, and essential software applications.
+                </li>
+                <li>
+                  Educated users on cybersecurity fundamentals, including
+                  password security, phishing awareness, and safe internet
+                  practices.
+                </li>
+                <li>
+                  Provided hands-on guidance to help users confidently navigate
+                  digital tools, applications, and online services.
+                </li>
+                <li>
+                  Translated technical concepts into clear, user-friendly
+                  instruction for non-technical audiences.
+                </li>
+              </ul>
+              <div className="experience-card__body">
                 <span className="experience-card__body-label">
                   Software development contributions
                 </span>
-                Collaborated with the Web Development Team to improve accessibility
-                of LearnBasicTech.org, enhancing usability for individuals with
-                disabilities and navigation challenges. Contributed to the Game
-                Development Team, creating interactive experiences aimed at
-                improving digital literacy and engagement. Partnership with Fifth Sun Pictures and participated in a VR
-                Development Bootcamp using the Engage platform to build immersive
-                and interactive learning environments. Worked in team-based
-                environments to develop user-focused and accessible technology
-                solutions.
-              </p>
+                <ul className="experience-card__bullets">
+                  <li>
+                    Collaborated with the Web Development Team to improve
+                    accessibility of LearnBasicTech.org for users with
+                    disabilities and navigation challenges.
+                  </li>
+                  <li>
+                    Contributed to the Game Development Team, creating
+                    interactive experiences aimed at improving digital literacy
+                    and engagement.
+                  </li>
+                  <li>
+                    Partnered with Fifth Sun Pictures and participated in a VR
+                    Development Bootcamp using the Engage platform to build
+                    immersive learning environments.
+                  </li>
+                  <li>
+                    Worked in team-based environments to develop user-focused
+                    and accessible technology solutions.
+                  </li>
+                </ul>
+              </div>
             </article>
 
             <article className="experience-card">
@@ -345,9 +407,32 @@ function App() {
                   </time>
                 </div>
               </header>
-              <p className="experience-card__body">
-              Collaborated in a small development team using GitHub, Discord, and Visual Studio Code to build a modern CRM dashboard for real estate agents. The application was developed using React, Next.js, TypeScript, and Tailwind CSS for a responsive, component-based frontend, with Node.js handling backend functionality and API integration. PostgreSQL (via Supabase) was used to design and manage relational data for property listings, user accounts, and application records. Implemented secure authentication and role-based access control using NextAuth, and developed real-time features such as dashboards, analytics, charts, and calendars. The project was structured for scalability and planned deployment using Docker.
-              </p>
+              <ul className="experience-card__body">
+                <li>
+                  Collaborated in a small development team using GitHub, Discord,
+                  and Visual Studio Code to build a modern CRM dashboard for real
+                  estate agents.
+                </li>
+                <li>
+                  Built a responsive, component-based frontend with React,
+                  Next.js, TypeScript, and Tailwind CSS; used Node.js for backend
+                  functionality and API integration.
+                </li>
+                <li>
+                  Designed and managed relational data in PostgreSQL (via
+                  Supabase) for property listings, user accounts, and application
+                  records.
+                </li>
+                <li>
+                  Implemented secure authentication and role-based access control
+                  with NextAuth, plus real-time dashboards, analytics, charts, and
+                  calendars.
+                </li>
+                <li>
+                  Structured the project for scalability with planned Docker
+                  deployment.
+                </li>
+              </ul>
             </article>
 
             <article className="experience-card">
@@ -372,11 +457,16 @@ function App() {
                   </time>
                 </div>
               </header>
-              <p className="experience-card__body">
-              Completed a 100-hour professional development internship focused on leadership,
-teamwork, and communication. Participated in resume workshops, interview preparation,
-and peer mentoring activities.
-              </p>
+              <ul className="experience-card__body">
+                <li>
+                  Completed a 100-hour professional development internship focused
+                  on leadership, teamwork, and communication.
+                </li>
+                <li>
+                  Participated in resume workshops, interview preparation, and
+                  peer mentoring activities.
+                </li>
+              </ul>
             </article>
           </div>
         </section>
@@ -390,11 +480,78 @@ and peer mentoring activities.
           <div className="projects-grid">
             <article className="project-card">
               <header className="project-card__header">
+                <h3>FlyAeroView – Live Footage</h3>
+              </header>
+              <ul className="project-card__body">
+                <li>
+                  Founder &amp; Full-Stack Developer (2025 – Present) · Personal
+                  startup
+                </li>
+                <li>
+                  Designed and launched a production marketplace connecting users
+                  with nearby streamers for paid, real-time on-site video
+                  requests
+                </li>
+                <li>
+                  Built full-stack features with React, TypeScript, Node.js, and
+                  Express, including AWS Cognito auth, role-based dashboards,
+                  real-time messaging, and video delivery workflows
+                </li>
+                <li>
+                  Implemented geolocation-based job matching with Mapbox, GPS
+                  tracking, and location verification for footage authenticity
+                </li>
+                <li>
+                  Integrated Stripe Checkout for secure booking payments,
+                  automated transactions, and post-payment job activation
+                </li>
+                <li>
+                  Developed dynamic pricing (mission complexity, travel distance,
+                  timed coverage, fees, taxes) plus favorites and ratings
+                </li>
+                <li>
+                  Deployed and maintained on AWS EC2 with Nginx and PM2 for
+                  production hosting, reliability, and scalability
+                </li>
+              </ul>
+              <div className="project-card__tags">
+                {[
+                  'React',
+                  'TypeScript',
+                  'Node.js',
+                  'Express',
+                  'AWS Cognito',
+                  'Mapbox',
+                  'Stripe',
+                  'AWS EC2',
+                  'Nginx',
+                  'PM2',
+                ].map((tag) => (
+                  <span key={tag} className="project-card__tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </article>
+
+            <article className="project-card">
+              <header className="project-card__header">
                 <h3>Real Estate CRM Dashboard</h3>
               </header>
-              <p className="project-card__body">
-              A CRM platform similar to Zillow that helps realtors and property owners manage property listings, track sales activity, and connect with potential buyers or sellers. The system enables users to create and manage listings, view market activity, and communicate efficiently, with the long-term goal of scaling to a global property management and real estate network.
-              </p>
+              <ul className="project-card__body">
+                <li>
+                  CRM platform (Zillow-style) for realtors and property owners to
+                  manage listings, track sales, and connect with buyers or sellers
+                </li>
+                <li>
+                  Supports creating and managing listings, viewing market
+                  activity, and communicating efficiently
+                </li>
+                <li>
+                  Long-term goal of scaling to a global property management and
+                  real estate network
+                </li>
+              </ul>
               <div className="project-card__tags">
                 {[
                   'React',
@@ -416,18 +573,28 @@ and peer mentoring activities.
               <header className="project-card__header">
                 <h3>Portfolio Site</h3>
               </header>
-              <p className="project-card__body">
-                Single-page portfolio built with React 19 and TypeScript, bundled
-                with Vite and the React Compiler enabled in the toolchain. A sticky
-                sidebar handles in-page navigation (hash links with smooth
-                scrolling) across Home, Skills, Experience, Projects, and Contact.
-                The main column uses CSS custom properties for a purple-and-black
-                theme, including striped sections and cards tuned for readability.
-                The hero rotates role titles on an interval; Skills are grouped
-                into category grids with Lucide React and react-icons; layout and
-                responsive behavior are implemented with global theme tokens in
-                index.css and section layout in App.css.
-              </p>
+              <ul className="project-card__body">
+                <li>
+                  Single-page portfolio with React 19, TypeScript, Vite, and the
+                  React Compiler
+                </li>
+                <li>
+                  Sticky sidebar with hash navigation across Home, Skills,
+                  Experience, Projects, and Contact
+                </li>
+                <li>
+                  Purple-and-black theme via CSS custom properties, striped
+                  sections, and card layouts
+                </li>
+                <li>
+                  Rotating hero role titles; Skills grids with Lucide React and
+                  react-icons
+                </li>
+                <li>
+                  Responsive layout with global tokens in index.css and section
+                  styles in App.css
+                </li>
+              </ul>
               <div className="project-card__tags">
                 {['React', 'Vite', 'TypeScript', 'CSS'].map((tag) => (
                   <span key={tag} className="project-card__tag">
@@ -450,9 +617,16 @@ and peer mentoring activities.
                   Live Site
                 </a>
               </header>
-              <p className="project-card__body">
-              First attempt at using Three.js to create a 3D scene. This is a React + Three.js holiday web page that renders an interactive 3D Christmas scene (tree, snow, and gifts) in the browser. You can orbit/zoom the camera, and clicking a special present opens a simple overlay message that says “Merry Christmas.”
-              </p>
+              <ul className="project-card__body">
+                <li>
+                  First Three.js project: React + Three.js holiday page with an
+                  interactive 3D Christmas scene (tree, snow, and gifts)
+                </li>
+                <li>Orbit and zoom the camera in the browser</li>
+                <li>
+                  Clicking a special present opens a “Merry Christmas” overlay
+                </li>
+              </ul>
               <div className="project-card__tags">
                 {['Three.js', 'JavaScript', 'WebGL'].map((tag) => (
                   <span key={tag} className="project-card__tag">
@@ -470,12 +644,16 @@ and peer mentoring activities.
                   Live Site
                 </a>
               </header>
-              <p className="project-card__body">
-                Contributed updates focused on usability and accessibility for a
-                public-facing digital literacy site. Worked on UI polish,
-                navigation clarity, and inclusive patterns to make content easier
-                to consume for users with differing needs and devices.
-              </p>
+              <ul className="project-card__body">
+                <li>
+                  Usability and accessibility updates for a public digital
+                  literacy site
+                </li>
+                <li>
+                  UI polish, clearer navigation, and inclusive patterns for
+                  varied needs and devices
+                </li>
+              </ul>
               <div className="project-card__tags">
                 {['Accessibility', 'HTML', 'CSS', 'JavaScript','C#', 'WordPress', 'PHP', 'ASP.NET', 'UX'].map((tag) => (
                   <span key={tag} className="project-card__tag">
@@ -489,14 +667,24 @@ and peer mentoring activities.
               <header className="project-card__header">
                 <h3>Readr - Mobile Book Recommendation App</h3>
               </header>
-              <p className="project-card__body">
-              The technologies used in this project are Cursor for the IDE, React Native (Expo), JavaScript, FireBase Auth,
-Google Books API (Google Cloud). I am developing a cross-platform iOS/Android app featuring a swipe-based
-book discovery and personalized recommendations. I used firebase authentication for secure and safe
-authorization, integrated google books api with caching and deduplication logic to avoid repeated
-recommendations of books. Designed mobile first User Interface with animated components and optimized
-navigation flows. This application is under work and not yet finished.
-              </p>
+              <ul className="project-card__body">
+                <li>
+                  Cross-platform iOS/Android app (in progress) with swipe-based
+                  book discovery and personalized recommendations
+                </li>
+                <li>
+                  Built with React Native (Expo), JavaScript, Firebase Auth, and
+                  Google Books API (Google Cloud) in Cursor
+                </li>
+                <li>
+                  Caching and deduplication to avoid repeating book
+                  recommendations
+                </li>
+                <li>
+                  Mobile-first UI with animated components and optimized
+                  navigation flows
+                </li>
+              </ul>
               <div className="project-card__tags">
                 {[
                   'React Native',
@@ -516,12 +704,47 @@ navigation flows. This application is under work and not yet finished.
             <article className="project-card">
               <header className="project-card__header">
                 <h3>United Peace Officers Against Crime</h3>
+                <a
+                  className="project-card__link"
+                  href="https://upacprogram.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <ExternalLink
+                    className="project-card__link-icon"
+                    aria-hidden="true"
+                  />
+                  Live Site
+                </a>
               </header>
-              <p className="project-card__body">
-              Built a responsive website for a non-profit organization "United Peace Officers Against Crime" using React + Vite + TypeScript, Tailwind CSS, and React Router, featuring a modern multi-page layout (Home, About, Programs, Forms, Contact), downloadable PDF resources, and guided multi-step application forms. Implemented secure file uploads to Supabase Storage (with RLS policies) and stored counselor application submissions in a Supabase Postgres database, including validation, user-friendly UI/UX (cards, modals, drag‑and‑drop uploads), and environment-based configuration for production deployments.
-              </p>
+              <ul className="project-card__body">
+                <li>
+                  Responsive non-profit site with React, Vite, TypeScript,
+                  Tailwind CSS, and React Router
+                </li>
+                <li>
+                  Multi-page layout (Home, About, Programs, Forms, Contact) with
+                  downloadable PDFs and multi-step application forms
+                </li>
+                <li>
+                  Secure file uploads to Supabase Storage (RLS) and counselor
+                  submissions in Supabase Postgres
+                </li>
+                <li>
+                  Validation, cards, modals, drag-and-drop uploads, and
+                  environment-based production config
+                </li>
+              </ul>
               <div className="project-card__tags">
-                {['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router', 'Supabase', 'UI/UX'].map((tag) => (
+                {[
+                  'React',
+                  'TypeScript',
+                  'Vite',
+                  'Tailwind CSS',
+                  'React Router',
+                  'Supabase',
+                  'UI/UX',
+                ].map((tag) => (
                   <span key={tag} className="project-card__tag">
                     {tag}
                   </span>
