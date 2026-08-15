@@ -13,12 +13,30 @@
   flex-shrink: 0;
   width: 220px;
   border-right: 1px solid var(--accent);
-  padding: 32px 16px;
+  padding: 24px 16px 32px;
   position: sticky;
   top: 0;
   align-self: stretch;
   box-sizing: border-box;
   background: var(--bg-sidebar);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px 8px;
+}
+
+.sidebar-brand__logo {
+  width: 112px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .sidebar-nav ul {
@@ -644,6 +662,26 @@ ul.project-card__body li {
     max-width: 52ch;
   }
 
+  .home-photo {
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 3px solid color-mix(in srgb, var(--accent-main) 55%, transparent);
+    box-shadow:
+      0 0 0 4px color-mix(in srgb, var(--accent-main) 18%, transparent),
+      0 14px 28px -12px color-mix(in srgb, var(--accent-main) 45%, transparent);
+  }
+
+  .home-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
   .home-intro h1 {
     margin: 0;
   }
@@ -677,6 +715,11 @@ ul.project-card__body li {
     min-height: auto;
     padding-top: 40px;
     padding-bottom: 40px;
+
+    .home-photo {
+      width: 140px;
+      height: 140px;
+    }
   }
 }
 
@@ -688,20 +731,6 @@ ul.project-card__body li {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-.hero {
-  position: relative;
-
-  .base {
-    width: 170px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    z-index: 0;
   }
 }
 
@@ -722,6 +751,15 @@ ul.project-card__body li {
     padding-bottom: 12px;
     padding-left: max(16px, env(safe-area-inset-left, 0px));
     padding-right: max(16px, env(safe-area-inset-right, 0px));
+    gap: 10px;
+  }
+
+  .sidebar-brand {
+    padding: 0 0 2px;
+  }
+
+  .sidebar-brand__logo {
+    width: 64px;
   }
 
   .sidebar-nav ul {

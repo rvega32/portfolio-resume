@@ -59,7 +59,6 @@ import {
 } from 'react-icons/si'
 import azureLogo from './assets/azure.svg'
 import csharpLogo from './assets/csharp.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 const ROLE_TITLES = [
@@ -182,6 +181,15 @@ function App() {
   return (
     <div className="app-shell">
       <aside className="sidebar">
+        <div className="sidebar-brand">
+          <img
+            className="sidebar-brand__logo"
+            src="/favicon-rv.png"
+            alt="Ricardo Vega"
+            width={120}
+            height={120}
+          />
+        </div>
         <nav className="sidebar-nav" aria-label="Primary">
           <ul>
             {navItems.map(({ id, label, Icon }) => (
@@ -198,10 +206,15 @@ function App() {
 
       <main className="main-content">
         <section id="home" className="section section--home" aria-label="Home">
-          <div className="hero">
-            <img src={heroImg} className="base" width="170" height="179" alt="" />
-          </div>
           <div className="home-intro">
+            <div className="home-photo">
+              <img
+                src="/DTD-Image.jpeg"
+                alt="Portrait of Ricardo"
+                width={180}
+                height={180}
+              />
+            </div>
             <h1>Ricardo</h1>
             <h2
               className="home-role"
