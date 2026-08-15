@@ -209,10 +209,10 @@ function App() {
           <div className="home-intro">
             <div className="home-photo">
               <img
-                src="/DTD-Image.jpeg"
+                src="/DTD-Image.png"
                 alt="Portrait of Ricardo"
-                width={180}
-                height={180}
+                width={320}
+                height={320}
               />
             </div>
             <h1>Ricardo</h1>
