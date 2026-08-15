@@ -20,6 +20,7 @@ import {
   Puzzle,
   Palette,
   Shield,
+  UserRound,
 } from 'lucide-react'
 import { DiEclipse } from 'react-icons/di'
 import { FaAws, FaLinkedin } from 'react-icons/fa'
@@ -71,6 +72,7 @@ const ROLE_TITLES = [
 
 const navItems = [
   { id: 'home', label: 'Home', Icon: Home },
+  { id: 'about', label: 'About', Icon: UserRound },
   { id: 'skills', label: 'Skills', Icon: Code2 },
   { id: 'experience', label: 'Experience', Icon: Briefcase },
   { id: 'projects', label: 'Projects', Icon: FolderGit2 },
@@ -211,12 +213,38 @@ function App() {
               </span>
             </h2>
             <p>
-              Hello, my name is Ricardo but you can call me Ricky. I am
-              currently pursuing a Bachelor&apos;s Degree in Computer Science. I
-              am a hard working person who is always optimistic and eager to
-              learn new things. I am strongly passionate about software
-              development and I am always looking for new challenges and
-              opportunities to grow as a developer.
+              Hello, my name is Ricardo — you can call me Ricky. I&apos;m
+              pursuing a Bachelor&apos;s in Computer Science and building toward
+              a career in software development.
+            </p>
+          </div>
+        </section>
+
+        <section id="about" className="section" aria-labelledby="about-heading">
+          <h2 className="text-center" id="about-heading">
+            ABOUT
+          </h2>
+          <p className="text-center skills-intro">A bit more about who I am.</p>
+
+          <div className="about-content">
+            <p>
+              Outside of coding, I&apos;m into sports — MMA, boxing, basketball,
+              baseball, football, and soccer. That competitive energy shows up
+              in how I approach problems: stay curious, stay hungry, and keep
+              improving.
+            </p>
+            <p>
+              I like learning across different worlds — construction, how cars
+              work, the stock market, software development, and broader
+              economics. I&apos;m drawn to understanding systems, whether
+              they&apos;re mechanical, financial, or digital.
+            </p>
+            <p>
+              My greatest strengths are passion and curiosity — and I treat them
+              carefully, because the same drive that helps me grow can pull me
+              in too many directions. I&apos;m intentional about channeling that
+              energy into finishing what I start and going deep when it matters,
+              especially in software.
             </p>
           </div>
         </section>
@@ -401,7 +429,7 @@ function App() {
                   </span>
                   <time
                     className="experience-card__timeline"
-                    dateTime="2023-01/2024-05"
+                    dateTime="2025-08/2026-02"
                   >
                     August 2025 – February 2026
                   </time>
@@ -481,6 +509,9 @@ function App() {
             <article className="project-card">
               <header className="project-card__header">
                 <h3>FlyAeroView – Live Footage</h3>
+                <p className="project-card__status">
+                  In production · Demo available on request
+                </p>
               </header>
               <ul className="project-card__body">
                 <li>
@@ -488,9 +519,8 @@ function App() {
                   startup
                 </li>
                 <li>
-                  Designed and launched a production marketplace connecting users
-                  with nearby streamers for paid, real-time on-site video
-                  requests
+                  Designing and shipping a marketplace that connects users with
+                  nearby streamers for paid, real-time on-site video requests
                 </li>
                 <li>
                   Built full-stack features with React, TypeScript, Node.js, and
@@ -512,6 +542,10 @@ function App() {
                 <li>
                   Deployed and maintained on AWS EC2 with Nginx and PM2 for
                   production hosting, reliability, and scalability
+                </li>
+                <li>
+                  Platform is still in active production; happy to give a live
+                  demo if you&apos;d like
                 </li>
               </ul>
               <div className="project-card__tags">

@@ -484,6 +484,20 @@ ul.project-card__body li {
   color: #ffffff;
 }
 
+.project-card__status {
+  margin: 0;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--accent-main) 95%, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--accent-main) 40%, transparent);
+  background: color-mix(in srgb, var(--accent-main) 12%, transparent);
+}
+
 .project-card__link {
   display: inline-flex;
   align-items: center;
@@ -758,6 +772,24 @@ ul.project-card__body li {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.about-content {
+  margin-top: 24px;
+  margin-inline: auto;
+  max-width: 42rem;
+  display: grid;
+  gap: 14px;
+}
+
+.section .about-content p {
+  margin: 0;
+  max-width: none;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0.015em;
+  color: rgba(255, 255, 255, 0.88);
+  text-align: left;
 }
 
 /* Contact */
