@@ -445,9 +445,9 @@ function App() {
                   </span>
                   <time
                     className="experience-card__timeline"
-                    dateTime="2025-08/2026-02"
+                    dateTime="2025-02/2026-02"
                   >
-                    August 2025 to February 2026
+                    February 2025 to February 2026
                   </time>
                 </div>
               </header>
