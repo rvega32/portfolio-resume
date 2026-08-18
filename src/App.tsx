@@ -63,7 +63,7 @@ import './App.css'
 
 const ROLE_TITLES = [
   'Software Engineer',
-  'Full-Stack Developer',
+  'Full Stack Developer',
   'Game Developer',
   'ML Engineer',
 ] as const
@@ -79,7 +79,7 @@ const navItems = [
 
 /** Update these with your real details. Replace `public/RicardoResume.pdf` with your real resume. */
 const CONTACT = {
-  phoneDisplay: '(323) 977-0604',
+  phoneDisplay: '(323) 977 0604',
   phoneTel: '+13239770604',
   email: 'ricky.v3ga11@gmail.com',
   locationLabel: 'Los Angeles, CA',
@@ -394,7 +394,7 @@ function App() {
                   immersive learning environments.
                 </li>
                 <li>
-                  Worked in team-based environments to develop user-focused
+                  Worked in team based environments to develop user focused
                   and accessible technology solutions.
                 </li>
               </ul>
@@ -414,7 +414,7 @@ function App() {
                 </div>
                 <div className="experience-card__meta-row">
                   <span className="experience-card__meta">
-                    Full-Stack Website Developer Intern
+                    Full Stack Website Developer Intern
                   </span>
                   <time
                     className="experience-card__timeline"
@@ -431,7 +431,7 @@ function App() {
                   estate agents.
                 </li>
                 <li>
-                  Built a responsive, component-based frontend with React,
+                  Built a responsive, component based frontend with React,
                   Next.js, TypeScript, and Tailwind CSS; used Node.js for backend
                   functionality and API integration.
                 </li>
@@ -441,8 +441,8 @@ function App() {
                   records.
                 </li>
                 <li>
-                  Implemented secure authentication and role-based access control
-                  with NextAuth, plus real-time dashboards, analytics, charts, and
+                  Implemented secure authentication and role based access control
+                  with NextAuth, plus real time dashboards, analytics, charts, and
                   calendars.
                 </li>
                 <li>
@@ -455,7 +455,7 @@ function App() {
             <article className="experience-card">
               <header className="experience-card__header">
                 <div className="experience-card__title-row">
-                  <h3>Para Los Niños (Non-Profit Organization)</h3>
+                  <h3>Para Los Niños (Nonprofit Organization)</h3>
                   <span className="experience-card__location">
                     <MapPin
                       className="experience-card__location-icon"
@@ -476,7 +476,7 @@ function App() {
               </header>
               <ul className="experience-card__body">
                 <li>
-                  Completed a 100-hour professional development internship focused
+                  Completed a 100 hour professional development internship focused
                   on leadership, teamwork, and communication.
                 </li>
                 <li>
@@ -499,30 +499,30 @@ function App() {
               <header className="project-card__header">
                 <h3>FlyAeroView: Live Footage</h3>
                 <p className="project-card__status">
-                  In production · Demo available on request
+                  In production. Demo available on request
                 </p>
               </header>
               <ul className="project-card__body">
                 <li>
-                  Founder &amp; Full-Stack Developer (2025 to Present) · Personal
+                  Founder and Full Stack Developer (2025 to Present). Personal
                   startup
                 </li>
                 <li>
                   Designing and shipping a marketplace that connects users with
-                  nearby streamers for paid, real-time on-site video requests
+                  nearby streamers for paid, real time on site video requests
                 </li>
                 <li>
-                  Built full-stack features with React, TypeScript, Node.js, and
-                  Express, including AWS Cognito auth, role-based dashboards,
-                  real-time messaging, and video delivery workflows
+                  Built full stack features with React, TypeScript, Node.js, and
+                  Express, including AWS Cognito auth, role based dashboards,
+                  real time messaging, and video delivery workflows
                 </li>
                 <li>
-                  Implemented geolocation-based job matching with Mapbox, GPS
+                  Implemented geolocation based job matching with Mapbox, GPS
                   tracking, and location verification for footage authenticity
                 </li>
                 <li>
                   Integrated Stripe Checkout for secure booking payments,
-                  automated transactions, and post-payment job activation
+                  automated transactions, and post payment job activation
                 </li>
                 <li>
                   Developed dynamic pricing (mission complexity, travel distance,
@@ -563,7 +563,7 @@ function App() {
               </header>
               <ul className="project-card__body">
                 <li>
-                  CRM platform (Zillow-style) for realtors and property owners to
+                  CRM platform (Zillow style) for realtors and property owners to
                   manage listings, track sales, and connect with buyers or sellers
                 </li>
                 <li>
@@ -571,7 +571,7 @@ function App() {
                   activity, and communicating efficiently
                 </li>
                 <li>
-                  Long-term goal of scaling to a global property management and
+                  Long term goal of scaling to a global property management and
                   real estate network
                 </li>
               </ul>
@@ -598,7 +598,7 @@ function App() {
               </header>
               <ul className="project-card__body">
                 <li>
-                  Single-page portfolio with React 19, TypeScript, Vite, and the
+                  Single page portfolio with React 19, TypeScript, Vite, and the
                   React Compiler
                 </li>
                 <li>
@@ -606,7 +606,7 @@ function App() {
                   Experience, Projects, and Contact
                 </li>
                 <li>
-                  Purple-and-black theme via CSS custom properties, striped
+                  Purple and black theme via CSS custom properties, striped
                   sections, and card layouts
                 </li>
                 <li>
@@ -692,7 +692,7 @@ function App() {
               </header>
               <ul className="project-card__body">
                 <li>
-                  Cross-platform iOS/Android app (in progress) with swipe-based
+                  Cross platform iOS and Android app (in progress) with swipe based
                   book discovery and personalized recommendations
                 </li>
                 <li>
@@ -704,7 +704,7 @@ function App() {
                   recommendations
                 </li>
                 <li>
-                  Mobile-first UI with animated components and optimized
+                  Mobile first UI with animated components and optimized
                   navigation flows
                 </li>
               </ul>
@@ -742,20 +742,20 @@ function App() {
               </header>
               <ul className="project-card__body">
                 <li>
-                  Responsive non-profit site with React, Vite, TypeScript,
+                  Responsive nonprofit site with React, Vite, TypeScript,
                   Tailwind CSS, and React Router
                 </li>
                 <li>
-                  Multi-page layout (Home, About, Programs, Forms, Contact) with
-                  downloadable PDFs and multi-step application forms
+                  Multi page layout (Home, About, Programs, Forms, Contact) with
+                  downloadable PDFs and multi step application forms
                 </li>
                 <li>
                   Secure file uploads to Supabase Storage (RLS) and counselor
                   submissions in Supabase Postgres
                 </li>
                 <li>
-                  Validation, cards, modals, drag-and-drop uploads, and
-                  environment-based production config
+                  Validation, cards, modals, drag and drop uploads, and
+                  environment based production config
                 </li>
               </ul>
               <div className="project-card__tags">
