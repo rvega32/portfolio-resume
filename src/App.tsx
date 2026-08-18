@@ -356,10 +356,7 @@ function App() {
             <article className="experience-card">
               <header className="experience-card__header">
                 <div className="experience-card__title-row">
-                  <h3>
-                    Los Angeles County Internal Services Department: Delete the
-                    Divide
-                  </h3>
+                  <h3>Los Angeles County Internal Services Department</h3>
                   <span className="experience-card__location">
                     <MapPin
                       className="experience-card__location-icon"
@@ -382,49 +379,25 @@ function App() {
               </header>
               <ul className="experience-card__body">
                 <li>
-                  Trained residents with limited technical experience on
-                  computers, smartphones, and essential software applications.
+                  Collaborated with the Web Development Team to improve
+                  accessibility of LearnBasicTech.org for users with
+                  disabilities and navigation challenges.
                 </li>
                 <li>
-                  Educated users on cybersecurity fundamentals, including
-                  password security, phishing awareness, and safe internet
-                  practices.
+                  Contributed to the Game Development Team, creating
+                  interactive experiences aimed at improving digital literacy
+                  and engagement.
                 </li>
                 <li>
-                  Provided hands-on guidance to help users confidently navigate
-                  digital tools, applications, and online services.
+                  Partnered with Fifth Sun Pictures and participated in a VR
+                  Development Bootcamp using the Engage platform to build
+                  immersive learning environments.
                 </li>
                 <li>
-                  Translated technical concepts into clear, user-friendly
-                  instruction for non-technical audiences.
+                  Worked in team-based environments to develop user-focused
+                  and accessible technology solutions.
                 </li>
               </ul>
-              <div className="experience-card__body">
-                <span className="experience-card__body-label">
-                  Software development contributions
-                </span>
-                <ul className="experience-card__bullets">
-                  <li>
-                    Collaborated with the Web Development Team to improve
-                    accessibility of LearnBasicTech.org for users with
-                    disabilities and navigation challenges.
-                  </li>
-                  <li>
-                    Contributed to the Game Development Team, creating
-                    interactive experiences aimed at improving digital literacy
-                    and engagement.
-                  </li>
-                  <li>
-                    Partnered with Fifth Sun Pictures and participated in a VR
-                    Development Bootcamp using the Engage platform to build
-                    immersive learning environments.
-                  </li>
-                  <li>
-                    Worked in team-based environments to develop user-focused
-                    and accessible technology solutions.
-                  </li>
-                </ul>
-              </div>
             </article>
 
             <article className="experience-card">
